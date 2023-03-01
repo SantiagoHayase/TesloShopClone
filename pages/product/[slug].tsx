@@ -34,9 +34,6 @@ const ProductPage: NextPage<Props> = ({ product }) => {
   });
 
   const router = useRouter();
-  // const { products: product, isLoading } = useProduct<IProduct>(
-  //   `/products/${router.query.slug}`
-  // );
 
   const selectedSize = (size: ISize) => {
     setTempCartProduct((currentProduct) => ({
@@ -125,31 +122,6 @@ const ProductPage: NextPage<Props> = ({ product }) => {
   );
 };
 
-// getServerSideProps No usar esto. SSR
-
-// export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-//   const { slug = "" } = params as { slug: string };
-
-//   const product = await dbProducts.getProductBySlug(slug);
-
-//   if (!product) {
-//     return {
-//       redirect: {
-//         destination: "/",
-//         permanent: false,
-//       },
-//     };
-//   }
-//   return {
-//     props: {
-//       product,
-//     },
-//   };
-// };
-
-//getStaticsPaths...
-//blocking
-
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
   const productSlugs = await dbProducts.getAllProductSlugs();
 
@@ -162,8 +134,6 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
     fallback: "blocking",
   };
 };
-
-//getStaticsProps...
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug = "" } = params as { slug: string };
