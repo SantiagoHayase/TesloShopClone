@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { useSession, signOut } from "next-auth/react";
 import { FC, useEffect, useReducer, useContext } from "react";
-import { tesloApi } from "../../api";
+import { tesloApi } from "../../axiosApi";
 import { IUser } from "../../interfaces";
 import { AuthContext, authReducer } from "./";
 

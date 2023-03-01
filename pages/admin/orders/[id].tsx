@@ -17,7 +17,7 @@ import { GetServerSideProps, NextPage } from "next";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { IOrder } from "../../../interfaces";
-import { tesloApi } from "../../../api";
+import { tesloApi } from "../../../axiosApi";
 import { AdminLayout } from "../../../components/layouts";
 import { CartList, OrderSummary } from "../../../components/cart";
 import { dbOrders } from "../../../database";
