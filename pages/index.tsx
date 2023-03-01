@@ -8,6 +8,7 @@ import { FullScreenLoading } from "../components/ui/FullScreenLoading";
 
 const HomePage: NextPage = () => {
   const { products, isLoading } = useProduct("/products");
+  console.log(products[0].images);
 
   return (
     <ShopLayout
