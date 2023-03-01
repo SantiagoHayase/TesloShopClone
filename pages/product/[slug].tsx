@@ -135,7 +135,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { slug = "" } = params as { slug: string };
 
   const product = await dbProducts.getProductBySlug(slug);
