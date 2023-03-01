@@ -20,9 +20,9 @@ const ProductCard: FC<Props> = ({ product }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isImageLoadead, setIsImageLoaded] = useState(false);
 
-  // const productImage = useMemo(() => {
-  //   return isHovered ? product.images[1] : product.images[0];
-  // }, [isHovered, product.images]);
+  const productImage = useMemo(() => {
+    return isHovered ? product.images[1] : product.images[0];
+  }, [isHovered, product.images]);
 
   return (
     <Grid
@@ -50,7 +50,7 @@ const ProductCard: FC<Props> = ({ product }) => {
 
             <CardMedia
               component="img"
-              image={product.images[0]}
+              image={productImage}
               alt={product.title}
               className="fadeIn"
               onLoad={() => {
