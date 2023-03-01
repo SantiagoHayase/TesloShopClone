@@ -81,8 +81,8 @@ const ProductAdminPage: FC<Props> = ({ product }) => {
         const newSlug =
           value.title
             ?.trim()
-            .replaceAll(" ", "_")
-            .replaceAll("'", "")
+            .replace(" ", "_")
+            .replace("'", "")
             .toLocaleLowerCase() || "";
 
         setValue("slug", newSlug);
