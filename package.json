@@ -27,7 +27,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.42.1",
-    "react-slideshow-image": "^3.7.5",
+    "react-slideshow-image": "^4.2.1",
     "swr": "^1.2.1"
   },
   "devDependencies": {
